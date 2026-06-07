@@ -1,0 +1,88 @@
+import type { Feature } from '../types/feature';
+
+export const mockFeatures: Feature[] = [
+  {
+    id: '1',
+    title: 'AI Code Review Assistant',
+    description: 'Automated code review powered by machine learning to catch bugs and suggest improvements',
+    category: 'AI',
+    votes: 342,
+  },
+  {
+    id: '2',
+    title: 'Mobile Offline Mode',
+    description: 'Allow users to access features and sync data when internet connection is unavailable',
+    category: 'Mobile',
+    votes: 289,
+  },
+  {
+    id: '3',
+    title: 'Enterprise SSO Integration',
+    description: 'Support for SAML and OAuth2 for enterprise single sign-on',
+    category: 'Platform',
+    votes: 245,
+  },
+  {
+    id: '4',
+    title: 'Comprehensive Audit Logs',
+    description: 'Track all user actions and system changes with detailed audit trails for compliance',
+    category: 'Security',
+    votes: 218,
+  },
+  {
+    id: '5',
+    title: 'Dark Mode Theme',
+    description: 'Native dark mode support across all UI components',
+    category: 'Platform',
+    votes: 412,
+  },
+  {
+    id: '6',
+    title: 'GitHub Integration',
+    description: 'Direct integration with GitHub for repository management and PR automation',
+    category: 'Platform',
+    votes: 367,
+  },
+  {
+    id: '7',
+    title: 'Security Dashboard',
+    description: 'Centralized security monitoring with threat detection and vulnerability alerts',
+    category: 'Security',
+    votes: 156,
+  },
+  {
+    id: '8',
+    title: 'AI-Powered Documentation Generator',
+    description: 'Automatically generate technical documentation from code comments and structure',
+    category: 'AI',
+    votes: 298,
+  },
+  {
+    id: '9',
+    title: 'Feature Flags Management',
+    description: 'TODO: Add feature priority support. Possible values: High, Medium, Low. Control feature rollout with feature flags',
+    category: 'Platform',
+    votes: 201,
+  },
+  {
+    id: '10',
+    title: 'Mobile Push Notifications',
+    description: 'Send real-time push notifications to mobile app users',
+    category: 'Mobile',
+    votes: 267,
+  },
+  {
+    id: '11',
+    title: 'End-to-End Encryption',
+    description: 'Military-grade E2E encryption for all sensitive data in transit and at rest',
+    category: 'Security',
+    votes: 189,
+  },
+  {
+    id: '12',
+    title: 'AI-Powered Search',
+    description: 'Intelligent search with NLP to understand user intent and return relevant results',
+    category: 'AI',
+    votes: 321,
+  },
+];
