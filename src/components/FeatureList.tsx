@@ -5,7 +5,8 @@ import '../styles/FeatureList.css';
 
 interface FeatureListProps {
   features: Feature[];
-  onVote: (featureId: string) => void;
+  // onVote now returns a boolean: true when vote accepted, false when already voted
+  onVote: (featureId: string) => boolean;
 }
 
 export const FeatureList = ({ features, onVote }: FeatureListProps) => {
