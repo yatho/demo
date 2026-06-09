@@ -56,7 +56,64 @@ describe('featureUtils', () => {
       expect(result?.votes).toBe(100);
     });
 
-    // TODO: Add test for tie scenarios
+    it('returns the first feature when multiple features tie for the most votes', () => {
+      const tiedFeatures: Feature[] = [
+        {
+          id: 'a',
+          title: 'Feature A',
+          description: 'Description A',
+          category: 'AI',
+          votes: 80,
+        },
+        {
+          id: 'b',
+          title: 'Feature B',
+          description: 'Description B',
+          category: 'Platform',
+          votes: 80,
+        },
+        {
+          id: 'c',
+          title: 'Feature C',
+          description: 'Description C',
+          category: 'Mobile',
+          votes: 30,
+        },
+      ];
+      const result = getMostPopularFeature(tiedFeatures);
+      expect(result?.id).toBe('a');
+      expect(result?.votes).toBe(80);
+    });
+
+    it('keeps the earliest top feature when a later feature ties it', () => {
+      const tiedFeatures: Feature[] = [
+        {
+          id: 'first',
+          title: 'First',
+          description: 'First top feature',
+          category: 'AI',
+          votes: 10,
+        },
+        {
+          id: 'tie',
+          title: 'Tie',
+          description: 'Ties the leader later in the array',
+          category: 'Security',
+          votes: 100,
+        },
+        {
+          id: 'leader',
+          title: 'Leader',
+          description: 'Reaches the max first',
+          category: 'Platform',
+          votes: 100,
+        },
+      ];
+      const result = getMostPopularFeature(tiedFeatures);
+      expect(result?.id).toBe('tie');
+      expect(result?.votes).toBe(100);
+    });
+
     // TODO: Add test for empty array
   });
 });
