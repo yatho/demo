@@ -10,6 +10,19 @@
   --border-color: #e2e8f0;
 }
 
+/* Dark theme override applied when document.documentElement has .dark-theme */
+.dark-theme {
+  --primary-color: #2563eb;
+  --secondary-color: #059669;
+  --accent-color: #f59e0b;
+  --danger-color: #ef4444;
+  --bg-color: #0b1120;
+  --card-bg: #0f1724;
+  --text-primary: #e6eef7;
+  --text-secondary: #9aa6b2;
+  --border-color: #1f2937;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -82,8 +95,8 @@ body {
 }
 
 .app-footer {
-  background-color: #1e293b;
-  color: white;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
   text-align: center;
   padding: 2rem;
   margin-top: 3rem;

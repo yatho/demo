@@ -5,6 +5,7 @@ import { filterFeaturesByCategory } from './utils/featureUtils';
 import { Dashboard } from './components/Dashboard';
 import { FilterBar } from './components/FilterBar';
 import { FeatureList } from './components/FeatureList';
+import { ThemeToggle } from './components/ThemeToggle';
 import './App.css';
 
 function App() {
@@ -18,7 +19,10 @@ function App() {
       <header className="app-header">
         <div className="header-content">
           <h1>🚀 Feature Voting Portal</h1>
-          <p className="subtitle">Vote for the features you'd like to see next</p>
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '1rem', flexWrap: 'wrap'}}>
+            <p className="subtitle">Vote for the features you'd like to see next</p>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
