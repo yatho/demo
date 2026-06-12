@@ -4,7 +4,7 @@ import '../styles/FeatureCard.css';
 
 interface FeatureCardProps {
   feature: Feature;
-  onVote: (featureId: string) => void;
+  onVote: (featureId: string) => boolean;
 }
 
 export const FeatureCard = ({ feature, onVote }: FeatureCardProps) => {
